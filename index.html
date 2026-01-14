@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+    <div><h4>Mark</h4></div>
+    <input id="Mmass" value="78" type="text">
+    <input id="Mheight" value="1.69" type="text">
+    </div>
+    <div><h4>Mark</h4></div>
+    <input id="Jmass" value="92" type="text">
+    <input id="Jheight" value="1.95" type="text">
+    <div>
+     <button id="Calc">Calculate</button>
+    </div>
+    <script>
+        var btn = document.getElementById('Calc');
+        
+        var Mmass = parseFloat(document.getElementById('Mmass').value);
+        var Mheight = parseFloat(document.getElementById('Mheight').value);
+        var Jmass = parseFloat(document.getElementById('Jmass').value);
+        var Jheight = parseFloat(document.getElementById('Jheight').value);
+
+        btn.onclick = () => {
+        var Mbmi = Mmass/(Mheight*Mheight);
+        var Jbmi = Jmass/(Jheight*Jheight);
+
+        console.log(Mbmi);
+        console.log(Jbmi);
+
+        if(Mbmi > Jbmi){
+            console.log('Mark better than John');
+        } else if (bmi < Jbmi){
+            console.log('John better than Mark');
+        }
+        else{
+            console.log('equal');
+        }
+        }
+
+    </script>
+</body>
+</html>
