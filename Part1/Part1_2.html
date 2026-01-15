@@ -8,24 +8,24 @@
   <body>
     <div>
       <div><h4>Mark</h4></div>
-      <input id="Mmass" value="78" type="text" />
-      <input id="Mheight" value="1.69" type="text" />
+      <input id="Mmass" type="text" />
+      <input id="Mheight" type="text" />
     </div>
     <div><h4>Mark</h4></div>
-    <input id="Jmass" value="92" type="text" />
-    <input id="Jheight" value="1.95" type="text" />
+    <input id="Jmass" type="text" />
+    <input id="Jheight" type="text" />
     <div>
       <button id="Calc">Calculate</button>
     </div>
     <script>
-      var btn = document.getElementById("Calc");
+      Calc.onclick = () => {
+        var btn = document.getElementById("Calc");
 
-      var Mmass = parseFloat(document.getElementById("Mmass").value);
-      var Mheight = parseFloat(document.getElementById("Mheight").value);
-      var Jmass = parseFloat(document.getElementById("Jmass").value);
-      var Jheight = parseFloat(document.getElementById("Jheight").value);
+        var Mmass = parseFloat(document.getElementById("Mmass").value);
+        var Mheight = parseFloat(document.getElementById("Mheight").value);
+        var Jmass = parseFloat(document.getElementById("Jmass").value);
+        var Jheight = parseFloat(document.getElementById("Jheight").value);
 
-      btn.onclick = () => {
         var Mbmi = Math.round(Mmass / (Mheight * Mheight));
         var Jbmi = Math.round(Jmass / (Jheight * Jheight));
 
@@ -36,7 +36,7 @@
           console.log(
             "Mark's BMI(" + Mbmi + ") is higher than John's!(" + Jbmi + ")"
           );
-        } else if (bmi < Jbmi) {
+        } else if (Mbmi < Jbmi) {
           console.log(
             "John's BMI (" + Jbmi + ") is higher than Mark's!(" + Mbmi + ")"
           );
