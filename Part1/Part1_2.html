@@ -26,16 +26,20 @@
       var Jheight = parseFloat(document.getElementById("Jheight").value);
 
       btn.onclick = () => {
-        var Mbmi = Mmass / (Mheight * Mheight);
-        var Jbmi = Jmass / (Jheight * Jheight);
+        var Mbmi = Math.round(Mmass / (Mheight * Mheight));
+        var Jbmi = Math.round(Jmass / (Jheight * Jheight));
 
         console.log(Mbmi);
         console.log(Jbmi);
 
         if (Mbmi > Jbmi) {
-          console.log("Mark better than John");
+          console.log(
+            "Mark's BMI(" + Mbmi + ") is higher than John's!(" + Jbmi + ")"
+          );
         } else if (bmi < Jbmi) {
-          console.log("John better than Mark");
+          console.log(
+            "John's BMI (" + Jbmi + ") is higher than Mark's!(" + Mbmi + ")"
+          );
         } else {
           console.log("equal");
         }
