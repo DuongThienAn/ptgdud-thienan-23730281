@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div>
+      <h3>Bill value:</h3>
+      <input type="text" id="bill" />
+      <button id="calc">Caculate Tip</button>
+    </div>
+    <script>
+      //   var calc = document.getElementById("calc");
+      calc.onclick = () => {
+        var bill = parseFloat(document.getElementById("bill").value);
+        var tip = bill > 50 && bill <= 300 ? bill * 0.2 : bill * 0.2;
+        var total = bill + tip;
+        console.log(
+          "The bill was " +
+            bill +
+            ", the tip was " +
+            tip +
+            ", and the total: " +
+            total
+        );
+      };
+    </script>
+  </body>
+</html>
