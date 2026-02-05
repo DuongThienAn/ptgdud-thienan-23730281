@@ -1,0 +1,20 @@
+.btn:hover {
+  border-radius: 10px;
+
+  box-shadow: 5px 5px 10px rgba(255, 0, 0, 0.288);
+}
+.card {
+  background-color: azure;
+}
+.card img {
+  width: 1200px;
+  height: auto;
+  object-fit: cover;
+}
+
+h1 {
+  color: black;
+}
+h3 {
+  color: black;
+}
